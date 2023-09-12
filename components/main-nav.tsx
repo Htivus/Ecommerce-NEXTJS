@@ -15,6 +15,11 @@ export function MainNav({
 
     const routes=[
         {
+            href: `/${params.storeId}`,
+            label: 'Overview',
+            active: pathname === `/${params.storeId}`,
+        },
+        {
             href: `/${params.storeId}/settings`,
             label: 'Settings',
             active: pathname === `/${params.storeId}/settings`,
@@ -34,7 +39,6 @@ export function MainNav({
                     route.active?"text-black dark:text-white":"text-muted-foreground"
                 )}
                 >{route.label}
-
                 </Link>
             ))}
     
